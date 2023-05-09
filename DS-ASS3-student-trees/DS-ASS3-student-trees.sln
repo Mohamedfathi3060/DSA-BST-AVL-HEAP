@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DS-ASS3-student-trees", "DS-ASS3-student-trees.vcxproj", "{5F5062CF-F1BD-4CD4-94E9-CC2E789909DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F5062CF-F1BD-4CD4-94E9-CC2E789909DA}.Debug|x64.ActiveCfg = Debug|x64
+		{5F5062CF-F1BD-4CD4-94E9-CC2E789909DA}.Debug|x64.Build.0 = Debug|x64
+		{5F5062CF-F1BD-4CD4-94E9-CC2E789909DA}.Debug|x86.ActiveCfg = Debug|Win32
+		{5F5062CF-F1BD-4CD4-94E9-CC2E789909DA}.Debug|x86.Build.0 = Debug|Win32
+		{5F5062CF-F1BD-4CD4-94E9-CC2E789909DA}.Release|x64.ActiveCfg = Release|x64
+		{5F5062CF-F1BD-4CD4-94E9-CC2E789909DA}.Release|x64.Build.0 = Release|x64
+		{5F5062CF-F1BD-4CD4-94E9-CC2E789909DA}.Release|x86.ActiveCfg = Release|Win32
+		{5F5062CF-F1BD-4CD4-94E9-CC2E789909DA}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {034A1A76-F661-45D4-89CB-D08646297015}
+	EndGlobalSection
+EndGlobal
