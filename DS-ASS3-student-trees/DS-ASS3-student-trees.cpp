@@ -3,9 +3,9 @@
 
 #include <iostream>
 #include <queue>
+#include "BST.h"
 
 using namespace std;
-
 
 
 
@@ -191,6 +191,7 @@ public:
 
 int main()
 {
-    cout << "Hello World!\n";
+	BST s;
+	s.BSTMenu();
 }
 
