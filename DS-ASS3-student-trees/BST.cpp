@@ -123,10 +123,10 @@ void BST::loadFile(string fileName)
 	file.open(fileName);
 	if (file.is_open()) {
 		int studentID;
-		string name;
+		string name,department,firstLine;
 		float GPA;
-		string department;
 		while (!file.eof()) {
+			getline(file, firstLine);
 			file >> studentID >> name >> GPA >> department;
 			insert(studentID, name, GPA, department);
 		}
