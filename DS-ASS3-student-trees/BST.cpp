@@ -1,5 +1,6 @@
 #include "BST.h"
-#define _PATH_ "Students.txt"
+
+
 BST::BST() {
 	root = nullptr;
 }
@@ -36,7 +37,7 @@ BSTNode<Student>* BST::getRoot() {
 
 void BST::BSTMenu()
 {
-	loadFile("Students.txt");
+	loadFile();
 	int choice = 0;
 	bool flag = true;
 	while (flag) {
@@ -118,40 +119,6 @@ void BST::printNodeData(BSTNode<Student>* node) {
 		cout << node->data;
 }
 
-void BST::loadFile(string fileName)
-{
-	string myText;
-	ifstream MyReadFile(_PATH_);
-	int counter = 0;
-	int ID = 0;
-	string name = "", department = "";
-	float GPA = 0;
-	getline(MyReadFile, myText); // read first lINE which is the  number of students
-	while (getline(MyReadFile, myText)) {
-		if (counter == 0)
-		{
-			ID = stoi(myText);
-		}
-		else if (counter == 1)
-		{
-			name = myText;
-
-		}
-		else if (counter == 2)
-		{
-
-			GPA = stof(myText);
-		}
-		else
-		{
-			department = myText;
-			insert(ID, name, GPA, department);
-			counter = -1;
-		}
-		counter += 1;
-	}
-	MyReadFile.close();
-}
 
 void BST::inOrderTraverse(BSTNode<Student>* node)
 {
@@ -268,4 +235,39 @@ void BST::remove(const int& studentID)
 	}
 }
 
+void BST::loadFile()
+{
+	string myText;
+	ifstream MyReadFile(_PATH_);
+	Student s;
+	int counter = 0;
+	if (!MyReadFile.fail()) {
+		getline(MyReadFile, myText); // read first lINE which is the  number of students
+		while (getline(MyReadFile, myText)) {
+			if (counter == 0)
+			{
+				s.ID = stoi(myText);
+			}
+			else if (counter == 1)
+			{
+				s.name = myText;
+			}
+			else if (counter == 2)
+			{
+				s.GPA = stof(myText);
+			}
+			else
+			{
+				s.department = myText;
+				insert(s.ID, s.name, s.GPA, s.department);
+				counter = -1;
+			}
+			counter += 1;
+		}
+	}
+	else {
+		cout << "File Damaged!\n";
+	}
+	MyReadFile.close();
+}
 

@@ -1,10 +1,13 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include <cstring>
 #include <queue>
 #include <fstream>
 #include "BSTNode.h"
 #include "Student.h"
+#include <math.h>
+#define _PATH_ "data.txt"
 using namespace std;
 class BST {
 	BSTNode<Student>* root;
@@ -20,7 +23,7 @@ public:
 	void insert(const int& studentID, const string& name, const float& GPA, const string& department);
 	void remove(const int& studentID);
 	void printNodeData(BSTNode<Student>* node);
-	void loadFile(string fileName);
+	void loadFile();
 	BSTNode<Student>* getRoot();
 	map<string, int>& getDeptStudent() { return deptStudents; }
 	void reduceDeptStudents(string dept) { deptStudents[dept]--; }
