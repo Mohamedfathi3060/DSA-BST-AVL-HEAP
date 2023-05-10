@@ -1,2 +1,3 @@
 ﻿  BST.cpp
+Student.obj : warning LNK4205: 'E:\Study\Second Year\Second Year_SecondSemester\Datastructure\Assignments\DSA-BST-AVL-HEAP\DS-ASS3-student-trees\x64\Debug\vc143.pdb' is missing current debugging information for referencing module; linking object as if no debug info
   DS-ASS3-student-trees.vcxproj -> E:\Study\Second Year\Second Year_SecondSemester\Datastructure\Assignments\DSA-BST-AVL-HEAP\DS-ASS3-student-trees\x64\Debug\DS-ASS3-student-trees.exe

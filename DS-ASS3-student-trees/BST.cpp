@@ -1,4 +1,5 @@
 #include "BST.h"
+#define _PATH_ "Students.txt"
 BST::BST() {
 	root = nullptr;
 }
@@ -119,21 +120,37 @@ void BST::printNodeData(BSTNode<Student>* node) {
 
 void BST::loadFile(string fileName)
 {
-	ifstream file;
-	file.open(fileName);
-	if (file.is_open()) {
-		int studentID;
-		string name,department,firstLine;
-		float GPA;
-		while (!file.eof()) {
-			getline(file, firstLine);
-			file >> studentID >> name >> GPA >> department;
-			insert(studentID, name, GPA, department);
+	string myText;
+	ifstream MyReadFile(_PATH_);
+	int counter = 0;
+	int ID = 0;
+	string name = "", department = "";
+	float GPA = 0;
+	getline(MyReadFile, myText); // read first lINE which is the  number of students
+	while (getline(MyReadFile, myText)) {
+		if (counter == 0)
+		{
+			ID = stoi(myText);
 		}
+		else if (counter == 1)
+		{
+			name = myText;
+
+		}
+		else if (counter == 2)
+		{
+
+			GPA = stof(myText);
+		}
+		else
+		{
+			department = myText;
+			insert(ID, name, GPA, department);
+			counter = -1;
+		}
+		counter += 1;
 	}
-	else {
-		cout << "File not found\n";
-	}
+	MyReadFile.close();
 }
 
 void BST::inOrderTraverse(BSTNode<Student>* node)
