@@ -471,7 +471,8 @@ public:
 			}
 		}
 		cout << "Name: ";
-		cin >> s.name;
+		cin.ignore();
+		getline(cin,s.name);
 		while (true)
 		{
 			string stt;
@@ -1047,6 +1048,82 @@ int main()
 {
 	menu m;
 	m.run();
+	/*
+	>>> BST,AVL <<<
+	Enter number of option: 1 (Add student)
+	id: 50
+	Name: tamer said
+	GPA: 3.5
+	Department: CS
+	The student is added.
+	Enter number of option: 2 (remove student)
+	Id: 5
+	Student is found.
+	[5, Omnia Osama, 3.6, IS]
+	Student is deleted.
+	Enter number of option: 2 (remove student)
+	Id: 90
+	Student is not found.
+	Enter number of option: 3 (search student)
+	id: 6
+	Student is found.
+	[6, Ahmed Omar, 3.9, CS]
+	Enter number of option: 4 (print all students)
+	Print 10 Students.
+	[1, Mohamed Ali, 3.4, CS]
+	[2, Mona Samir, 3.2, IT]
+	[3, Ola Maher, 1.2, CS]
+	[4, Magy Madgy, 2.3, DS]
+	[5, Omnia Osama, 3.6, IS]
+	[6, Ahmed Omar, 3.9, CS]
+	[7, Mai Adel, 3.1, IS]
+	[8, Mohamed Saleh, 2.4, CS]
+	[9, Hany Mohsen, 1.8, DS]
+	[10, Mohanad Bahaa, 2.9, IT]
+	Students per Departments:
+	CS 5 Students
+	IT 2 Students
+	DS 2 Students
+	IS 2 Students
+	>>> Min Heap <<<
+	Enter number of option: 1
+	id: 11
+	Name: Hana Sobhy
+	GPA: 3.2
+	Department: IT
+	The student is added.
+	Print 11 studnts.
+	[3, Ola Maher, 1.2, CS]
+	[9, Hany Mohsen, 1.8, DS]
+	[4, Magy Madgy, 2.3, DS]
+	[8, Mohamed Saleh, 2.4, CS]
+	[10, Mohanad Bahaa, 2.9, IT]
+	[7, Mai Adel, 3.1, IS]
+	[2, Mona Samir, 3.2, IT]
+	[11, Hana Sobhy, 3.2, IT]
+	[1, Mohamed Ali, 3.4, CS]
+	[5, Omnia Osama, 3.6, IS]
+	[6, Ahmed Omar, 3.9, CS]
+	>>> Max Heap <<<
+	Enter number of option: 1
+	id: 11
+	Name: Hana Sobhy
+	GPA: 3.2
+	Department: IT
+	The student is added.
+	Print 12 studnts.
+	[6, Ahmed Omar, 3.9, CS]
+	[5, Omnia Osama, 3.6, IS]
+	[1, Mohamed Ali, 3.4, CS]
+	[2, Mona Samir, 3.2, IT]
+	[11, Hana Sobhy, 3.2, IT]
+	[7, Mai Adel, 3.1, IS]
+	[10, Mohanad Bahaa, 2.9, IT]
+	[8, Mohamed Saleh, 2.4, CS]
+	[4, Magy Madgy, 2.3, DS]
+	[9, Hany Mohsen, 1.8, DS]
+	[3, Ola Maher, 1.2, CS]
+	*/
 	
 }
 
